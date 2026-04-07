@@ -1,0 +1,11 @@
+lambda-start-glue-job: {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "glue:StartJobRun",
+            "Resource": "arn:aws:glue:us-east-1:471639749846:job/silver layer transformation by glue job"
+        }
+    ]
+}
