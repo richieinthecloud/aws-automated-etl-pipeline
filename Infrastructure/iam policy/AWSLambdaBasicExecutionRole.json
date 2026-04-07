@@ -1,4 +1,4 @@
-AWSLambdaBasicExecutionRole-9a5e5ff6-7e37-4d7e-98d2-f0fff04009f5: {
+{
     "Version": "2012-10-17",
     "Statement": [
         {
