@@ -1,0 +1,5 @@
+Our Glue job is going to read data that gets uploaded onto our Bronze layer S3 bucket. This is where raw data is stored. Our Glue job is going to read through the CSV and create a table.
+From there, it will automatically infer the schema. It will drop duplicates and then run a custom SQL script that AWS will automatically convert to Spark SQL. Once the data transformations have been completed, 
+the data will be converted into a parquet file and stored inside a Silver layer S3 bucket. This will host CSV files that have been cleaned up and transformed. 
+
+In this project, I did not do anymore than this singular example because Glue jobs are expensive and I ain't got the money to blow on AWS projects, respectfully. 
