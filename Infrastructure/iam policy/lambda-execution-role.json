@@ -1,0 +1,20 @@
+AWSLambdaBasicExecutionRole-9a5e5ff6-7e37-4d7e-98d2-f0fff04009f5: {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:us-east-1:471639749846:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:us-east-1:471639749846:log-group:/aws/lambda/s3-upload-function:*"
+            ]
+        }
+    ]
+}
