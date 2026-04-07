@@ -1,0 +1,9 @@
+{
+  "source": ["aws.s3"],
+  "detail-type": ["Object Created"],
+  "detail": {
+    "bucket": {
+      "name": ["automated-etl-project-richie", "aws-glue-assets-471639749846-us-east-1"]
+    }
+  }
+}
