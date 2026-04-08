@@ -15,19 +15,6 @@ Whenever a file is uploaded to Amazon S3:
 
 No buttons clicked. No cron jobs. No manual intervention.
 
-## Architecture Overview
-
-S3 (Upload)
- ├─▶ Lambda (Orchestration)
- │    └─▶ AWS Glue (ETL + Data Quality)
- │          └─▶ S3 (Processed Output)
- │
- └─▶ EventBridge
-      └─▶ SNS (Email Notification)
-
-CloudWatch monitors Lambda, Glue, and overall execution
-
-
 ## 🔁 How the Pipeline Works (Step‑by‑Step)
 
 A CSV file is uploaded to the S3 bronze layer
@@ -36,10 +23,8 @@ Lambda extracts bucket + file details
 Lambda starts an AWS Glue ETL job, passing runtime parameters
 Glue:
 
-Removes duplicates
-Standardizes fields (e.g., gender, marital status)
-Applies basic data quality checks
-Writes Parquet output to the S3 gold layer
+Removes duplicates, standardizes fields, applies basic data quality checks
+Writes Parquet output to the S3 silver layer
 
 In parallel, EventBridge detects the S3 upload
 EventBridge triggers SNS, sending an email notification
@@ -78,7 +63,7 @@ This project was built to practice and demonstrate:
 ✅ Serverless data processing
 ✅ AWS service integration
 ✅ Decoupling between processing and notifications
-✅ Real‑world ETL patterns (bronze → gold)
+✅ Real‑world ETL patterns (bronze → silver)
 ✅ Cloud observability and validation
 
 It’s intentionally designed to feel like something you’d find inside a real engineering team — not just a demo.
