@@ -71,6 +71,8 @@ It’s intentionally designed to feel like something you’d find inside a real 
 ## 🚧 Future Improvements
 Possible enhancements include:
 
+Reviewing the ETL script
+Dedicating some more money into this, AWS Glue is not free. 
 Infrastructure as Code (Terraform or CloudFormation)
 Retry logic and DLQs for Lambda
 Environment separation (dev / prod)
