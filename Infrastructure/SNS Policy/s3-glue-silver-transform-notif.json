@@ -18,7 +18,7 @@
         "SNS:AddPermission",
         "SNS:Subscribe"
       ],
-      "Resource": "arn:aws:sns:us-east-1:471639749846:s3-glue-gold-load-notif",
+      "Resource": "arn:aws:sns:us-east-1:471639749846:s3-glue-silver-transform-notif",
       "Condition": {
         "StringEquals": {
           "AWS:SourceAccount": "471639749846"
