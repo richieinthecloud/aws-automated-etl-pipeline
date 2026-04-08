@@ -5,13 +5,13 @@
 - Eventbridge to connect services, SNS for notifications and AWS Cloudwatch for logs. 
 
 ## What does this pipeline do? 
-Whenever a file is uploaded to Amazon S3:
+Whenever a file is uploaded to Amazon S3 🪣:
 
 An ETL pipeline automatically kicks off ->
 AWS Glue transforms and cleans the data ->
 Processed data is written back to S3 ->
-An email notification is sent ->
-CloudWatch logs and metrics verify everything worked behind the scenes ->
+An email notification is sent 📧 ->
+CloudWatch logs and metrics verify everything worked behind the scenes ☁️ ->
 
 No buttons clicked. No cron jobs. No manual intervention.
 
