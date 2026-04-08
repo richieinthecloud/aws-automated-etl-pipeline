@@ -1,5 +1,5 @@
 # Event-Driven, Automated ETL Pipeline using AWS Services
-## Where data flows by itself, notifications appear like magic, and AWS helps us quietly identify and put out fires 🔥
+## Where data flows by itself 🌌, notifications appear like magic 🪄, and AWS helps us quietly identify and put out fires 🔥
 - Using AWS services, I was able to create an automated, event-triggered data cleansing pipeline.
 - An S3 bucket for staging raw data (bronze layer), AWS Glue for analyzing the data and schema enforcement, another S3 bucket for clean data (silver layer)
 - Eventbridge to connect services, SNS for notifications and AWS Cloudwatch for logs. 
