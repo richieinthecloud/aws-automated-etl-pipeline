@@ -7,11 +7,11 @@
 ## What does this pipeline do? 
 Whenever a file is uploaded to Amazon S3:
 
-✅ An ETL pipeline automatically kicks off
-✅ AWS Glue transforms and cleans the data
-✅ Processed data is written back to S3
-✅ An email notification is sent
-✅ CloudWatch logs and metrics verify everything worked behind the scenes
+An ETL pipeline automatically kicks off ->
+AWS Glue transforms and cleans the data ->
+Processed data is written back to S3 ->
+An email notification is sent ->
+CloudWatch logs and metrics verify everything worked behind the scenes ->
 
 No buttons clicked. No cron jobs. No manual intervention.
 
