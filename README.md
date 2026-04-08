@@ -7,9 +7,9 @@
 ## What does this pipeline do? 
 Whenever a file is uploaded to Amazon S3 🪣:
 
-An ETL pipeline automatically kicks off ->
-AWS Glue transforms and cleans the data ->
-Processed data is written back to S3 ->
+An ETL pipeline automatically kicks off ✅ ->
+AWS Glue transforms and cleans the data 🥉 ->
+Processed data is written back to S3 🥈 ->
 An email notification is sent 📧 ->
 CloudWatch logs and metrics verify everything worked behind the scenes ☁️ ->
 
@@ -17,14 +17,14 @@ No buttons clicked. No cron jobs. No manual intervention.
 
 ## 🔁 How the Pipeline Works (Step‑by‑Step)
 
-A CSV file is uploaded to the S3 bronze layer
+A CSV file is uploaded to the S3 bronze layer 🥉
 S3 triggers a Lambda function
 Lambda extracts bucket + file details
 Lambda starts an AWS Glue ETL job, passing runtime parameters
 Glue:
 
 Removes duplicates, standardizes fields, applies basic data quality checks
-Writes Parquet output to the S3 silver layer
+Writes Parquet output to the S3 silver layer 🥈
 
 In parallel, EventBridge detects the S3 upload
 EventBridge triggers SNS, sending an email notification
